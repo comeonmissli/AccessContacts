@@ -9,8 +9,103 @@
     tools:context=".MainActivity" >
 
     <TextView
+        android:id="@+id/num"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/name"
+        android:layout_marginTop="47dp"
+        android:textSize="20sp"
+        android:text="电话号码" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/num"
+        android:layout_alignBottom="@+id/num"
+        android:layout_toRightOf="@+id/add"
+        android:ems="10"
+        android:inputType="phone" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editText2"
+        android:layout_alignTop="@+id/name"
+        android:ems="10"
+        android:inputType="textPersonName" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/num"
+        android:layout_marginLeft="14dp"
+        android:textSize="20sp"
+        android:text="姓名" />
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/name"
+        android:layout_below="@+id/editText2"
+        android:layout_marginTop="52dp"
+        android:text="添加" />
+
+    <Button
+        android:id="@+id/show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/add"
+        android:layout_alignBottom="@+id/add"
+        android:layout_alignRight="@+id/editText2"
+        android:text="显示所有联系人" />
+
+    <TableRow
+        android:id="@+id/tablerow"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_alignRight="@+id/show"
+        android:layout_below="@+id/show"
+        android:layout_marginTop="10dp" >
+
+        <TextView
+            android:id="@+id/personId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="ID号" />
+        
+         <TextView
+            android:id="@+id/personname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:layout_marginLeft="80dp"
+             android:textSize="20sp"
+            android:text="姓名" />
+
+        <TextView
+            android:id="@+id/personnum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:textSize="20sp"
+            android:text="手机号" />
+
+       
+    </TableRow>
+
+    <ListView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_below="@+id/tablerow">
+    </ListView>
 
 </RelativeLayout>
